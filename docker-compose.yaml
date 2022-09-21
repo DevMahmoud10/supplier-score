@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  dev:
+    build:
+      context: .
+      target: base
+    container_name: "dev"
+    command: "python app.py"
+    ports:
+      - "3000:8000"
+    env_file:
+      - ./environments/dev.env
+    environment:
+      - PYTHON_ENVIRONMENT=dev
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: .
+      target: database
+    container_name: "supplier-score_db"
+    ports:
+      - "54320:5432"
+    # volumes:
+    #   - ./postgres-data:/var/lib/postgresql/data
+    env_file:
+      - ./environments/dev.env
