@@ -1,1 +1,2 @@
-psycopg2==2.9.3
+sqlite3==2.9.3
+SQLite version: ('3.30.1',)
