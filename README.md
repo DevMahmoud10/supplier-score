@@ -17,6 +17,10 @@ Several metrics can be derived from these events, such as:
 - Average review rating
 - Average order acceptance rate (i.e., ratio accepted orders / total orders)
 
+## Objective
+Calculating average review and acceptance ratio for every Supplier in
+the database. Each statistic should be run ans reported daily, and stored in a
+```supplier_score_metrics``` table.
 ## How to Run
 ### Prerequisites
 - Python3
