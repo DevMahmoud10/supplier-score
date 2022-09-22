@@ -21,6 +21,18 @@ Several metrics can be derived from these events, such as:
 Calculating average review and acceptance ratio for every Supplier in
 the database. Each statistic should be run ans reported daily, and stored in a
 ```supplier_score_metrics``` table.
+
+## Project Structure
+```
+├── constants.py    - constants used in project
+├── etl.py  - core building of project
+├── README.md   - (documentation) current file
+├── requirements.txt    - required libraries used in project
+├── sql
+│   └── hubs_events.sql     - dump events data queries
+└── supply_db.sqlite    - created database 
+```
+
 ## How to Run
 ### Prerequisites
 - Python3
